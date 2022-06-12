@@ -27,7 +27,7 @@ namespace WebApplication1
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<MainDbContext>(opt => opt.UseSqlServer(Configuration.GetConnectionString("Default")));
-            //services.AddScoped<IDbService, DbService>();
+            services.AddScoped<IDbService, DbService>();
             services.AddControllers();
         }
 
